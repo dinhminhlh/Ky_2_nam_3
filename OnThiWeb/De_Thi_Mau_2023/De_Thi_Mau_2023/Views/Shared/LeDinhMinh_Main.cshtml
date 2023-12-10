@@ -1,0 +1,32 @@
+﻿@model IEnumerable<De_Thi_Mau_2023.Models.Entities.HangHoa>
+<!-- Begin New Product -->
+<div class="content_top">
+    <div class="heading">
+        <h3>Le Dinh Minh</h3>
+    </div>
+    <div class="see">
+        <p><a href="#">See all Products</a></p>
+    </div>
+    <div class="clear"></div>
+</div>
+<div class="section group">
+    @foreach (var hh in Model)
+    {
+        <div class="grid_1_of_4 images_1_of_4">
+            <a href="preview.html"><img src="~/Content/images/@hh.Anh" alt="" /></a>
+            <h2>@hh.TenHang</h2>
+            <div class="price-details">
+                <div class="price-number">
+                    <p><span class="rupees">@hh.Gia</span></p>
+                </div>
+                <div class="add-cart">
+                    <h4><a href="preview.html">Add to Cart</a></h4>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    }
+</div>
+<!-- End New Product -->
+<!-- Begin Feature Products -->
+<!-- End Feature Products -->
