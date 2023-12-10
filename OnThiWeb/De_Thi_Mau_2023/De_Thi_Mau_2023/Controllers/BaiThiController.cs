@@ -54,5 +54,17 @@ namespace De_Thi_Mau_2023.Controllers
 				return View();
             }
         }
+        public ActionResult TimKiem(string keyword)
+        {
+			Model1 db = new Model1();
+			var sp = db.HangHoa.AsQueryable();
+
+            if(!string.IsNullOrEmpty(keyword))
+            {
+                sp = sp.Where(l => l.TenHang.ToLower().Contains(keyword.ToLower()));
+                ViewBag.keyword = keyword;
+            }
+            return PartialView("LeDinhMinh_Main", sp.ToList());
+		}
     }
 }
