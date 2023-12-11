@@ -1,0 +1,26 @@
+﻿@model IEnumerable<LeDinhMinh_211204113.Models.Entities.Products>
+
+<div class="wrapper">
+    @foreach (var hh in Model)
+    {
+        <div class="col-xs-4 product-men">
+            <div class="men-pro-item">
+                <div class="men-thumb-item">
+                    <img src="~/Content/images/@hh.Image" alt="">
+                </div>
+                <div class="item-info-product ">
+                    <h4>
+                        <a href="single.html">@hh.Name</a>
+                    </h4>
+                    <div class="info-product-price">
+                        <span class="item_price">@hh.UnitPrice</span>
+                    </div>
+                    <div class="snipcart-details">
+                        <a href="" class="button">Edit</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+
+</div>
