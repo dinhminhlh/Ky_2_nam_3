@@ -1,0 +1,11 @@
+A1 B1
+A1 20 3 C D E
+B 0 0
+C 15 1 F
+D 6 2 F I
+E 7 2 G K
+F 10 1 B1
+G 5 1 H
+H 3 1 B1
+I 8 2 B1 G
+K 12 0
